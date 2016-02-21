@@ -31,7 +31,7 @@ def _button():
 
 
 # Help me plaese!
-# After submit message, adress in brouser - 192.168.1.38:8000/_change, is not  - 192.168.1.38:8000/. Help me plaese!
+# After submit message, adress in browser - 192.168.1.38:8000/_change/, is not  - 192.168.1.38:8000/. Help me plaese!
 @app.route("/_change", methods=['POST'])
 def _change():
     if request.method == 'POST':
