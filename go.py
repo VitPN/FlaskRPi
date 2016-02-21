@@ -47,7 +47,7 @@ def _change():
     # return jsonify(value=lcdText)        
     # return ""                         
     # return redirect(url_for("Index"))  
-    return render_template("index.html", value=lcdText)
+    return render_template("index.html", value=lcdText, uptime=GetUptime())
 
 
 def GetUptime():
