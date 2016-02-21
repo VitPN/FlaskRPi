@@ -32,7 +32,7 @@ def _button():
 
 # Help me plaese!
 # After submit message, adress in browser - 192.168.1.38:8000/_change/, is not  - 192.168.1.38:8000/. Help me plaese!
-@app.route("/_change", methods=['POST'])
+@app.route("/_change", methods=['GET', 'POST'])
 def _change():
     if request.method == 'POST':
         # Get the value from the submitted form
@@ -44,10 +44,10 @@ def _change():
         # lcd.message(lcdText)  
     else:
         lcdText = None
-    return jsonify(value=lcdText)        # - is not work
-	# return ""                          # - is not work 
-	# return redirect(url_for("Index"))  # - is not work 
-    # return render_template("index.html", value=lcdText) # - is not work
+    # return jsonify(value=lcdText)        
+    # return ""                         
+    # return redirect(url_for("Index"))  
+    return render_template("index.html", value=lcdText)
 
 
 def GetUptime():
