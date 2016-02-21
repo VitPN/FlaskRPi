@@ -29,9 +29,6 @@ def _button():
         state = "not pressed"
     return jsonify(buttonState=state)
 
-
-# Help me plaese!
-# After submit message, adress in browser - 192.168.1.38:8000/_change/, is not  - 192.168.1.38:8000/. Help me plaese!
 @app.route("/_change", methods=['GET', 'POST'])
 def _change():
     if request.method == 'POST':
@@ -48,7 +45,6 @@ def _change():
     # return ""                         
     # return redirect(url_for("Index"))  
     return render_template("index.html", value=lcdText, uptime=GetUptime())
-
 
 def GetUptime():
     # get uptime from the linux terminal command
